@@ -1,0 +1,227 @@
+# Prefijo de los mensajes del Plugin:
+# [RoseStacker] texto de ejemplo
+# En el ejemplo se muestra un gradiente de colores 
+# <g:#HEXCODE1:#HEXCODE2:#HEXCODE3> Esto seria un gradiente entre 3 colores diferentes
+prefix: '&7[<g:#8A2387:#E94057:#F27121>RoseStacker&7] '
+
+# Etiquetas de los objetos apilados
+# Esto es lo que se ve encima de los items/entidades apiladas
+entity-stack-display: '&c%amount%x &7%name%'
+entity-stack-display-custom-name: '%name% &7[&c%amount%x&7]'
+entity-stack-display-spawn-egg: '&c%amount%x &7%name% Spawn Egg'
+item-stack-display: '&c%amount%x &7%name%'
+item-stack-display-single: '&7%name%'
+block-stack-display: '&c%amount%x &7%name%'
+spawner-stack-display: '&c%amount%x &7%name%'
+spawner-stack-display-single: '&7%name%'
+
+# Etiquetas de los Hologramas
+# Marcadores para Spawner disponibles: %name%, %amount%, %max_amount%, %time_remaining%, %ticks_remaining%, %total_spawned%
+# Soporta Multi-lineas
+block-hologram-display:
+  - '&c%amount%x &7%name%'
+spawner-hologram-display:
+  - '&c%amount%x &7%name%'
+spawner-hologram-display-single:
+  - '&7%name%'
+spawner-hologram-display-empty:
+  - '&c%amount%x &7%name%'
+spawner-hologram-display-empty-single:
+  - '&7%name%'
+
+# Mensaje del Comando Base '/rs'
+base-command-color: '&e'
+base-command-help: '&eUsa &b/%cmd% help &epara mas información sobre los comandos'
+
+# Comando para ayudas '/rs help'
+command-help-description: Muestra el menú de ayuda... Has llegado
+command-help-title: '&eComandos disponibles:'
+command-help-list-description: '&8 - &d/%cmd% %subcmd% %args% &7- %desc%'
+command-help-list-description-no-args: '&8 - &d/%cmd% %subcmd% &7- %desc%'
+
+# Comando para recargar la configuracion del plugin '/rs reload'
+command-reload-description: Recarga la configuracion del plugin
+command-reload-reloaded: '&eSe han recargado los datos, configuraciónes y archivos locales del plugin.'
+
+# Comando para Dar '/rs give ...'
+command-give-description: Dar elementos preapilados
+command-give-usage: '&cUso: &e/rs give <bloque|spawner|entidad> <jugador> <tipo> [tamañoDelStack] [cantidad]'
+command-give-given: '&eDado a &b%player% &e[%display%&e].'
+command-give-given-multiple: '&eDado a &b%player% &e%amount%x [%display%&e].'
+command-give-unstackable: '&cEl tipo especificado no es apilable.'
+command-give-too-large: '&cLa cantidad especificada supera el tamaño máximo de apilado para ese tipo.'
+
+# Comando para borar apilamientos `/rs clearall ...`
+command-clearall-description: Borra todo un tipo de apilamientos
+command-clearall-killed-entities: '&eLimpiado &b%amount% &eentidades apiladas.'
+command-clearall-killed-items: '&eLimpiado &b%amount% &eobjetos apilados.'
+command-clearall-killed-all: '&eLimpiado &b%entityAmount% &eentidades y, &b%itemAmount% &eobjetos, apilados'
+
+# Comando para estadisticas '/rs stats'
+command-stats-description: Muestra estadísticas del plugin
+command-stats-header: '&aEstadísticas actuales del plugin:'
+command-stats-threads: '&eHay &b%amount% &ecadenas apiladas activas'
+command-stats-stacked-entities: '&eHay &b%stackAmount% &eentidades apiladas, un total de: &b%total% &eentidades.'
+command-stats-stacked-items: '&eHay &b%stackAmount% &eobjetos cargados, un total de: &b%total% &eobjetos.'
+command-stats-stacked-blocks: '&eHay &b%stackAmount% &ebloques apilados, un total de: &b%total% &ebloques.'
+command-stats-stacked-spawners: '&eHay &b%stackAmount% &espawners apilados, un total de: &b%total% &espawners.'
+command-stats-active-tasks: '&eHay &b%amount% &etareas activas'
+
+# Comando para traducciones '/rs translate ...'
+command-translate-description: Traduce los nombres de los elementos apilados
+command-translate-loading: '&eDescargar y aplicar los datos de traducción, esto puede tardar un momento.'
+command-translate-failure: '&cNo se han podido traducir los nombres de los apilamientos. Se ha producido un problema al obtener los datos de configuración regional. Vuelva a intentarlo más tarde.'
+command-translate-invalid-locale: '&cNo se pueden traducir los nombres de los apilamientos. La configuración regional especificada no es válida.'
+command-translate-spawner-format: '&eLos nombres de los spawners no pudieron traducirse con precisión. Para arreglar esto puedes usar &b/rs translate en_us &3{} Spawner &epara que un spawner aparezca como "Cow Spawner". Usa &b{} &ecomo sustituto para el nombre del mob'
+command-translate-spawner-format-invalid: '&cEl formato de spawner que has proporcionado no es válido. Debe contener &b{} &cpara la colocación del nombre de mob.'
+command-translate-success: '&aSe ha traducido con éxito los nombres de los apilamientos.'
+
+# Comando de Herramienta de Apilamiento '/rs stacktool ...'
+command-stacktool-description: Otorga a un jugador la herramienta de apilamiento
+command-stacktool-given: '&eHas recibido la herramienta de apilamiento.'
+command-stacktool-given-other: '&b%player% &aha recibido la herramienta de apilamiento.'
+command-stacktool-no-console: '&cNo puedes dar esta herramienta a la consola.'
+command-stacktool-no-permission: '&cNo tienes permiso para usar la herramienta de apilamiento.'
+command-stacktool-invalid-entity: '&cEsa entidad no es parte de un apilamiento, ¿es un mob personalizado?'
+command-stacktool-marked-unstackable: '&eEl &b%type% &eha sido marcado como &cno apilable&e.'
+command-stacktool-marked-stackable: '&eEl &b%type% &eha sido marcado como &aapilable&e.'
+command-stacktool-marked-all-unstackable: '&eTodos los apilamiento de &b%type% &ehan sido marcados como &cno apilables&e.'
+command-stacktool-select-1: '&eSe ha seleccionado el &b%type% &ecomo Entidad #1. Selecciona otra entidad para probar si pueden apilarse.'
+command-stacktool-unselect-1: '&eSe ha deseleccionado el &b%type% &e.'
+command-stacktool-select-2: '&eSe ha seleccionado el &b%type% &ecomo Entidad #2.'
+command-stacktool-can-stack: '&aLa Entidad #1 puede apilarse con la Entidad #2.'
+command-stacktool-can-not-stack: '&cLa Entidad 1 no puede apilarse con la Entidad 2. Razón: &b%reason%'
+command-stacktool-info: '&eInformación del Apilamiento:'
+command-stacktool-info-uuid: '&eUUID: &b%uuid%'
+command-stacktool-info-entity-id: '&eID de la Entidad: &b%id%'
+command-stacktool-info-custom-name: '&eNombre Personalizado: &r%name%'
+command-stacktool-info-location: '&eUbicación: X: &b%x% &eY: &b%y% &eZ: &b%z% &eMundo: &b%world%'
+command-stacktool-info-chunk: '&eFragmento: &b%x%&e, &b%z%'
+command-stacktool-info-true: '&averdadero'
+command-stacktool-info-false: '&cfalso'
+command-stacktool-info-entity-type: '&eTipo de Entidad: &b%type%'
+command-stacktool-info-entity-stackable: '&eApilable: %value%'
+command-stacktool-info-entity-has-ai: '&eTiene IA: %value%'
+command-stacktool-info-entity-from-spawner: '&eDel Generador: %value%'
+command-stacktool-info-item-type: '&eTipo de Objeto: &b%type%'
+command-stacktool-info-block-type: '&eTipo de Bloque: &b%type%'
+command-stacktool-info-spawner-type: '&eTipo de Generador: &b%type%'
+command-stacktool-info-stack-size: '&eTamaño del Apilamiento: &b%amount%'
+command-stacktool-info-data-storage-type: '&eTipo de Almacenamiento de Datos: &b%type%'
+
+# Interfaz de Bloques Apilados
+gui-stacked-block-title: Editando Apilamiento de %name%
+gui-stacked-block-page-back:
+  - '&ePágina Anterior (%previousPage%/%maxPage%)'
+gui-stacked-block-page-forward:
+  - '&eSiguiente Página (%nextPage%/%maxPage%)'
+gui-stacked-block-destroy:
+  - '&cDestruir Apilamiento'
+  - '&eDestruye el apilamiento y suelta los objetos'
+gui-stacked-block-destroy-title: ¿Destruir Apilamiento de Bloques?
+gui-stacked-block-destroy-confirm:
+  - '&aConfirmar'
+  - '&eSí, destruir el apilamiento'
+gui-stacked-block-destroy-cancel:
+  - '&cCancelar'
+  - '&eNo, volver a la pantalla anterior'
+
+# Interfaz de Spawners Apilados
+gui-stacked-spawner-title: Viendo %name%
+gui-stacked-spawner-stats: '&6Estadísticas del Spawner'
+gui-stacked-spawner-min-spawn-delay: '&eRetraso de Generación Mínimo: &b%delay%'
+gui-stacked-spawner-max-spawn-delay: '&eRetraso de Generación Máximo: &b%delay%'
+gui-stacked-spawner-disabled-mob-ai: '&eIA de Mobs Desactivada: &b%disabled%'
+gui-stacked-spawner-entity-search-range: '&eRango de Búsqueda de Entidades: &b%range%'
+gui-stacked-spawner-player-activation-range: '&eRango de Activación de Jugadores: &b%range%'
+gui-stacked-spawner-spawn-range: '&eRango de Generación: &b%range%'
+gui-stacked-spawner-min-spawn-amount: '&eCantidad de Generación Mínima: &b%amount%'
+gui-stacked-spawner-max-spawn-amount: '&eCantidad de Generación Máxima: &b%amount%'
+gui-stacked-spawner-spawn-amount: '&eCantidad de Generación: &b%amount%'
+gui-stacked-spawner-spawn-conditions: '&6Condiciones de Generación'
+gui-stacked-spawner-time-until-next-spawn: '&eTiempo hasta la próxima generación: &b%time% ticks'
+gui-stacked-spawner-total-spawns: '&eMobs generados en total: &b%amount%'
+gui-stacked-spawner-valid-spawn-conditions: '&6Condiciones de Generación Válidas'
+gui-stacked-spawner-invalid-spawn-conditions: '&6Condiciones de Generación Inválidas'
+gui-stacked-spawner-entities-can-spawn: '&aLas entidades pueden generarse'
+gui-stacked-spawner-conditions-preventing-spawns: '&eCondiciones que impiden la generación:'
+
+# Mensajes de Condiciones de Spawners
+spawner-condition-invalid: '&7 - &c%message%'
+spawner-condition-info: '&e%condition%'
+spawner-condition-single: '&e%condition%: &b%value%'
+spawner-condition-list: '&e%condition%:'
+spawner-condition-list-item: '&7 - &b%message%'
+spawner-condition-above-sea-level-info: Sobre el Nivel del Mar
+spawner-condition-above-sea-level-invalid: No hay área de generación encima del nivel del mar
+spawner-condition-above-y-axis-info: Encima del Eje Y
+spawner-condition-above-y-axis-invalid: No hay área de generación encima del eje Y requerido
+spawner-condition-air-info: Aire Libre
+spawner-condition-air-invalid: No hay suficiente espacio de aire disponible
+spawner-condition-below-sea-level-info: Debajo del Nivel del Mar
+spawner-condition-below-sea-level-invalid: No hay área de generación debajo del nivel del mar
+spawner-condition-below-y-axis-info: Debajo del Eje Y
+spawner-condition-below-y-axis-invalid: No hay área de generación debajo del eje Y requerido
+spawner-condition-biome-info: Bioma
+spawner-condition-biome-invalid: Bioma incorrecto
+spawner-condition-block-info: Bloque de Generación
+spawner-condition-block-invalid: No hay bloques válidos para generación
+spawner-condition-block-exception-info: Excepción de Bloque para Generación
+spawner-condition-block-exception-invalid: Bloques para generación excluidos
+spawner-condition-darkness-info: Nivel bajo de Luz
+spawner-condition-darkness-invalid: El área está demasiado iluminada
+spawner-condition-total-darkness-info: Oscuridad Total
+spawner-condition-total-darkness-invalid: El área debe estar completamente oscura
+spawner-condition-fluid-info: Requiere Líquido
+spawner-condition-fluid-invalid: No hay líquido cercano
+spawner-condition-lightness-info: Nivel de Luz Alto
+spawner-condition-lightness-invalid: El área está demasiado oscura
+spawner-condition-max-nearby-entities-info: Máx. Entidades Cercanas
+spawner-condition-max-nearby-entities-invalid: Demasiadas entidades cercanas
+spawner-condition-no-skylight-access-info: Sin Acceso a la Luz del Cielo
+spawner-condition-no-skylight-access-invalid: No hay bloques para generación con acceso a la luz del cielo
+spawner-condition-on-ground-info: En el Suelo
+spawner-condition-on-ground-invalid: No hay suelo sólido cercano
+spawner-condition-skylight-access-info: Acceso a la Luz del Cielo
+spawner-condition-skylight-access-invalid: No hay bloques de generación con acceso a la luz del cielo
+spawner-condition-none-invalid: Se han superado los intentos máximos de generación
+spawner-condition-not-player-placed-invalid: Debe ser colocado por un jugador
+
+# Lore del objeto dado
+# Nota: Esto aparecerá en el lore de los items dados desde el comando '/rs give
+stack-item-lore-spawner: []
+stack-item-lore-spawner-plural: []
+stack-item-lore-block: []
+stack-item-lore-entity: []
+
+# Mensajes Genéricos de los Comandos
+no-permission: '&cNo tienes permisos para hacer eso.'
+only-player: '&cEste comando solo puede ser ejecutado por un jugador.'
+unknown-command: '&cComando desconocido, usa &b/%cmd% help &cpara más información.'
+unknown-command-error: '&cSe ha producido un error desconocido; los detalles se han impreso en la consola. Por favor, contacta a un administrador del servidor.'
+invalid-subcommand: '&cSubcomando inválido.'
+invalid-argument: '&cArgumento inválido: %message%.'
+invalid-argument-null: '&cArgumento inválido: %name% estaba nulo.'
+missing-arguments: '&cFaltan argumentos, se requieren &b%amount% &c.'
+missing-arguments-extra: '&cFaltan argumentos, se requieren &b%amount%+ &c.'
+
+# Mensajes de Error del Manejador de Argumentos
+argument-handler-enum: 'El tipo %enum% [%input%] no existe'
+argument-handler-enum-list: 'El tipo %enum% [%input%] no existe. Tipos válidos: %types%'
+argument-handler-string: El texto no puede estar vacío
+argument-handler-integer: El número entero [%input%] debe ser un número entero entre -2^31 y 2^31-1 inclusive
+argument-handler-player: No se encontró ningún jugador en línea con el nombre de usuario [%input%]
+argument-handler-stackplugin: No se encontró ningún plugin con el nombre [%input%]
+argument-handler-material: No se encontró ningún material con el nombre [%input%]
+argument-handler-stackamount: El tamaño del apilamiento [%input%] es inválido, debe ser un número mayor que 0
+argument-handler-stacktype: El tipo de apilamiento [%input%] es inválido
+argument-handler-translationlocale: La localización de traducción [%input%] es inválida
+
+# Mensajes Variados
+spawner-silk-touch-protect: '&c¡Advertencia! &eNecesitas usar un pico con toque de seda y/o tener permiso para recoger generadores. De lo contrario, no podrás hacerlo.'
+spawner-advanced-place-no-permission: '&c¡Advertencia! &eNo tienes permiso para colocar ese tipo de generador.'
+spawner-advanced-break-no-permission: '&c¡Advertencia! &eNo tienes permiso para recoger ese tipo de generador.'
+spawner-advanced-break-silktouch-no-permission: '&c¡Advertencia! &eNecesitas usar un pico con toque de seda para recoger ese tipo de generador.'
+spawner-convert-not-enough: '&c¡Advertencia! &eNo es posible convertir generadores usando huevos de aparición. No tienes suficientes huevos de aparición para hacer esta conversión.'
+number-separator: ','
+silktouch-chance-placeholder: '%chance%%'
